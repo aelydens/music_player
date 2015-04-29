@@ -20,7 +20,6 @@ $(document).ready(function() {
     drums3.play();
   }
 
-
   var key = {
     0: true,
     1: true,
