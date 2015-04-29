@@ -9,14 +9,13 @@ audio {
 }
 
 .left-col {
-  width: 25%;
+  width: 30%;
   height: 100%;
   position: fixed;
   float: left;
   margin: 0 10px 0 0;
   background: black;
-  border-right: 10px solid #ff9900;
-  box-shadow: 5px 0px 15px rgba(0,0,0,0.5);
+  box-shadow: 5px 0px 15px rgba(0,0,0,0.7);
   overflow-y: scroll;
 }
 
@@ -28,10 +27,20 @@ audio {
 .track-name {
   margin-top: 0px;
   color: #fff;
-  border-top: 2px solid #ff9900;
+  border-top: 5px solid gray;
   padding-top: 15px;
-  text-shadow: 1px 1px #ff9900;
+  text-shadow: 1px 1px lightblue;
   font: bold 18px "Orbitron", "Arial";
+  text-align: center;
+}
+
+.instructions {
+  margin: 10px;
+  color: #fff;
+  border-top: 5px solid gray;
+  padding-top: 15px;
+  text-shadow: 1px #ff9900;
+  font: bold 13px "Arial";
   text-align: center;
 }
 
