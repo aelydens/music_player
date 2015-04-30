@@ -7,17 +7,23 @@ $(document).ready(function() {
       drums3 = document.getElementById("drums3");
       didgi3 = document.getElementById("didgi3");
 
+  var arrIds = []
+
   function playSymphony(){
     drums.currentTime = 5;
     drums.play();
-    setTimeout( function() {
-        didgi4.play();
-    }, 2000 );
-    entertain.play();
-    drums6.play();
-
-    didgi3.play();
+    didgi4.play();
     drums3.play();
+    arrIds.push(setTimeout( function() {
+        didgi3.play();
+    }, 2000 ));
+    arrIds.push(setTimeout( function() {
+        didgi3.play();
+    }, 1000 ));
+    arrIds.push(setTimeout( function() {
+        drums6.play();
+    }, 3000 ));
+    h = setInterval( function() { entertain.play() }, 1000);
   }
 
   var key = {
@@ -94,7 +100,11 @@ $(document).ready(function() {
         this.pause();
         this.currentTime = 0;
     });
+    window.clearInterval(h);
+    arrIds.forEach(function(track) { window.clearTimeout(track) });
+    arrIds = [];
   }
+
 
   $(".record").on("click", function() {
     if ($(this).hasClass("rotate")) {
